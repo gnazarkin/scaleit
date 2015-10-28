@@ -2,13 +2,15 @@
 	<img src="img/scale.png">
   <div class="row">
   	<div id="forceTouchCapability">
+  	</div>
+  		<div>
     	<span class="btn">
     		ScaleUp 
     		<div class="text-muted">
     		(you may have to use a spoon or something as your tray)
     		</div>
     	</span>
-    </div>
+  	</div>
 	</div>
 	<div id="tapCount">
 	</div>
@@ -21,7 +23,8 @@
 	<div id="touchType">
 	</div>
 	<div id="force">
+	{{!-- {{editedForce}} --}}
 	</div>
-	<div id="force2">
+	<div id="force2" {{action 'reset'}}>
 	</div>
 </div>
