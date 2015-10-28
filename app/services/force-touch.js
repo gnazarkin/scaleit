@@ -56,7 +56,7 @@ export default Ember.Service.extend({
           document.getElementById('tapCount').innerHTML = '0';
           document.getElementById('timestamp').innerHTML = '0.000000';
           document.getElementById('phase').innerHTML = '0';
-          document.getElementById('force').innerHTML = '0.000000';
+          document.getElementById('force').innerHTML = '0.00';
           document.getElementById('maximumPossibleForce').innerHTML = '0.000000';
           document.getElementById('touchType').innerHTML = 'No Touch';
         }

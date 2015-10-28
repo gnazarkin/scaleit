@@ -12,7 +12,11 @@
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  input, textarea {
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input, textarea, {
     -webkit-touch-callout: auto;
     -webkit-user-select: auto;
   }
@@ -102,7 +106,7 @@ html {
     }
 }
 
-#force {
+#force-container {
   position: absolute;
   display: inline-block;
   bottom: 0em;
@@ -117,7 +121,7 @@ html {
   padding: 25px;
 }
 
-#force2 {
+#reset-container {
   position: absolute;
   display: inline-block;
   bottom: 0em;
