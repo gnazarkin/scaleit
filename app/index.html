@@ -16,8 +16,8 @@
     function onDeviceReady() {
       console.log(device.cordova);
       // on cordova start, asks plugin continuosly for ForceTouchData
-      // setInterval(getForceTouchData,15); // 15? => 1000ms/15 = ~60fps;
-      getForceTouchData();
+      setInterval(getForceTouchData,15); // 15? => 1000ms/15 = ~60fps;
+      // getForceTouchData();
 
       // getForceTouchData Method
       function getForceTouchData()
