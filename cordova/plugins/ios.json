@@ -1,0 +1,36 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"ForceTouch\"><param name=\"ios-package\" value=\"CDVForceTouch\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "co.addolabs.scaleit"
+        },
+        "cordova-plugin-forcetouch": {
+            "PACKAGE_NAME": "co.addolabs.scaleit"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "co.addolabs.scaleit"
+        }
+    },
+    "dependent_plugins": {}
+}
