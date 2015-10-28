@@ -63,7 +63,7 @@ html {
 
   background: #FF4962;
   box-shadow: 0px 5px 10px #D80032;
-  color: #D80032;
+  color: #F0EFF4;
 
   /* so nobody selects the inside text on button */
   user-select: none;
@@ -89,7 +89,7 @@ html {
 .btn:hover {
   background: #FF4962;
   box-shadow: 0px 7px 4px #D80032;
-  color: #D80032;
+  color: rbga (255, 255, 255, 0.7);
 }
 /* Imitate a pressed effect for buttons */
 .btn:active {
@@ -112,9 +112,9 @@ html {
   background-color: #66D7D1;
   // border: 1px solid #FF4962;
   text-align: center;
-  font-size: 20px;
-  color: #FF4962;
-  padding: 12px;
+  font-size: 25px;
+  color: #F0EFF4;
+  padding: 25px;
 }
 
 #force2 {
@@ -127,9 +127,9 @@ html {
   background-color: #8980F5;
   // border: 1px solid #FF4962;
   text-align: center;
-  font-size: 20px;
-  color: #FF4962;
-  padding: 12px;
+  font-size: 25px;
+  color: #F0EFF4;
+  padding: 25px;
 }
 
 img {
@@ -138,4 +138,8 @@ img {
   top: 1em;
   margin-right: auto;
   margin-left: auto;
+}
+
+.big {
+  font-size: 40px;
 }
