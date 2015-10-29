@@ -14,11 +14,11 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
-    <feature name="ForceTouch">
-        <param name="ios-package" value="CDVForceTouch" />
-    </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="ForceTouch">
+        <param name="ios-package" value="CDVForceTouch" />
     </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
