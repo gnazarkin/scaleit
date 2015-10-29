@@ -12,6 +12,7 @@ export function initialize(container, application) {
       application.advanceReadiness();
       ForceTouch.getForceTouchData(function (ForceTouchData)
       {
+
         // checking if device allows ForceTouch interaction
         var forceTouchCapability = '';
         switch(ForceTouchData.forceTouchCapability)
@@ -34,7 +35,9 @@ export function initialize(container, application) {
           document.getElementById('tapCount').innerHTML = ForceTouchData.touches[0].tapCount;
           document.getElementById('timestamp').innerHTML = ForceTouchData.touches[0].timestamp;
           document.getElementById('phase').innerHTML = ForceTouchData.touches[0].phase;
-          document.getElementById('force').innerHTML = ForceTouchData.touches[0].force * 412;
+          var weight = parseFloat((ForceTouchData.touches[0].force + 0.0388)) * 387.79;
+          document.getElementById('force').innerHTML = weight.toFixed(2) + ' g';
+          // document.getElementById('force').innerHTML = ForceTouchData.touches[0].force * 412;
           document.getElementById('maximumPossibleForce').innerHTML = ForceTouchData.touches[0].maximumPossibleForce;
 
           var force = parseFloat(ForceTouchData.touches[0].force);
@@ -49,20 +52,20 @@ export function initialize(container, application) {
             document.getElementById('touchType').innerHTML = 'Force Touch';
 
           // printing Touch Point position coordinates
-          console.log("x: " + ForceTouchData.touches[0].position.x + " ; " + "y: " + ForceTouchData.touches[0].position.y);
+          // console.log("x: " + ForceTouchData.touches[0].position.x + " ; " + "y: " + ForceTouchData.touches[0].position.y);
         }
         else
         {
           // no Touch Point available -> resetting output values
           document.getElementById('tapCount').innerHTML = '0';
-          document.getElementById('timestamp').innerHTML = '0.000000';
+          document.getElementById('timestamp').innerHTML = '0.00';
           document.getElementById('phase').innerHTML = '0';
-          document.getElementById('force').innerHTML = '0.000000';
-          document.getElementById('maximumPossibleForce').innerHTML = '0.000000';
+          document.getElementById('force').innerHTML = '0.00 g';
+          document.getElementById('maximumPossibleForce').innerHTML = '0.00';
           document.getElementById('touchType').innerHTML = 'No Touch';
         }
         // printing ForceTouchData output for each Touch Point available on screen
-        console.log(JSON.stringify(ForceTouchData.touches));
+        // console.log(JSON.stringify(ForceTouchData.touches));
       });
     }
   }

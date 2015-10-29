@@ -112,7 +112,7 @@ html {
   bottom: 0em;
   left: 0em;
   height: 12vh;
-  width: 50vw;
+  width: 100vw;
   background-color: #66D7D1;
   // border: 1px solid #FF4962;
   text-align: center;
@@ -123,7 +123,7 @@ html {
 
 #reset-container {
   position: absolute;
-  display: inline-block;
+  display: none;
   bottom: 0em;
   right: 0em;
   height: 12vh;
