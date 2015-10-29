@@ -1,4 +1,5 @@
 export function initialize(container, application) {
+  application.deferReadiness();
   document.addEventListener("deviceready", onDeviceReady , false);
   function onDeviceReady() {
     console.log(device.cordova);
@@ -8,6 +9,7 @@ export function initialize(container, application) {
     // getForceTouchData Method
     function getForceTouchData()
     {
+      application.advanceReadiness();
       ForceTouch.getForceTouchData(function (ForceTouchData)
       {
         // checking if device allows ForceTouch interaction
@@ -26,10 +28,8 @@ export function initialize(container, application) {
         }
 
         document.getElementById('forceTouchCapability').innerHTML = forceTouchCapability;
-
         if(ForceTouchData.touches[0])
-        {
-          application.set('forceTouch', ForceTouchData.touches[0]);
+        { 
           // setting output values for first Touch Point at index:0 -> "ForceTouchData.touches[0]"
           document.getElementById('tapCount').innerHTML = ForceTouchData.touches[0].tapCount;
           document.getElementById('timestamp').innerHTML = ForceTouchData.touches[0].timestamp;
