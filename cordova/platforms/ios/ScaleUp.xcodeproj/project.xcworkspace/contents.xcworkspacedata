@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/joeygollish/Desktop/scaleit/cordova/platforms/ios/ScaleUp.xcodeproj">
    </FileRef>
 </Workspace>
