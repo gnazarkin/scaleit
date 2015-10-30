@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'scaleup',
+    modulePrefix: 'scaleit',
     environment: environment,
     baseURL: '/',
     defaultLocationType: 'auto',
